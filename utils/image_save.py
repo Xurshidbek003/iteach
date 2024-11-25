@@ -7,7 +7,7 @@ from fastapi import UploadFile, HTTPException
 UPLOAD_DIR = "images"
 
 
-def save_image(file: UploadFile) -> str:
+def save_file(file: UploadFile) -> str:
     if not file.filename.lower().endswith(("png", "jpg", "jpeg")):
         raise HTTPException(status_code=400, detail="Faqat PNG, JPG yoki JPEG formatidagi rasmlar yuklash mumkin.")
 
